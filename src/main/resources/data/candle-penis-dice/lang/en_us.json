@@ -1,8 +1,0 @@
-{
-  "text.candle-penis-dice.dice_throw.one": "{\uD83C\uDFB2} %s бросил %s. Выпало: %d",
-  "text.candle-penis-dice.dice_throw.multiple": "{\uD83C\uDFB2} %s бросил %d %s. Выпало: %d. %s",
-  "text.candle-penis-dice.dice_throw.invalid_dice": "Хуйня а не кубик у тебя",
-  "text.candle-penis-dice.dice_throw.invalid_dice.boring": "Такого кубика нет",
-  "text.candle-penis-dice.dice_throw.no_dice": "Кубик введи, еблан",
-  "text.candle-penis-dice.dice_throw.no_dice.boring": "Введите кубик"
-}

@@ -15,7 +15,7 @@ import kotlin.random.Random
 
 val diceCommand = command("dice") {
     runs {
-        source.sendError(Text.translatable("text.candle-penis-dice.dice_throw.no_dice"))
+        source.sendError(Text.translatable("text.candle-kingdoms-dice.dice_throw.no_dice"))
     }
     argument("кубик", StringArgumentType.string()) { diceArg ->
         suggestList { listOf("D2", "D4", "D6", "D8", "D10", "D12", "D20") }
@@ -55,7 +55,7 @@ private fun throwDice (context: CommandContext<ServerCommandSource>, stringArg: 
                 max = 12 }
             "D20" -> { result = Random.nextInt(1, 20 + 1)
                 max = 20 }
-            else -> context.source.sendError(Text.translatable("text.candle-penis-dice.dice_throw.invalid_dice"))
+            else -> context.source.sendError(Text.translatable("text.candle-kingdoms-dice.dice_throw.invalid_dice"))
         }
         resultList.add(result)
     }
@@ -71,7 +71,7 @@ private fun throwDice (context: CommandContext<ServerCommandSource>, stringArg: 
     if (throwCount == 1) {
         if (resultList[0] == max) {     // wth? Critical succes from bg3?
             val msg = Text.translatable(
-            "text.candle-penis-dice.dice_throw.one",
+            "text.candle-kingdoms-dice.dice_throw.one",
             playerNameo?.copy()?.setStyle(Style.EMPTY.withBold(true)),
             Text.literal(stringArg).setStyle(Style.EMPTY.withColor(16755200).withBold(true)),
             Text.literal("${resultList[0]}").setStyle(Style.EMPTY.withColor(16755200).withBold(true))
@@ -80,7 +80,7 @@ private fun throwDice (context: CommandContext<ServerCommandSource>, stringArg: 
             context.source.server.broadcastText(msg)
         } else if (resultList[0] == 1 && stringArg != "D2") {       // Critical failure
             val msg = Text.translatable(
-            "text.candle-penis-dice.dice_throw.one",
+            "text.candle-kingdoms-dice.dice_throw.one",
             playerNameo?.copy()?.setStyle(Style.EMPTY.withBold(true)),
             Text.literal(stringArg).setStyle(Style.EMPTY.withColor(16755200).withBold(true)),
             Text.literal("${resultList[0]}").setStyle(Style.EMPTY.withColor(	16733525).withBold(true))
@@ -89,7 +89,7 @@ private fun throwDice (context: CommandContext<ServerCommandSource>, stringArg: 
             context.source.server.broadcastText(msg)
         } else {
             val msg = Text.translatable(
-                "text.candle-penis-dice.dice_throw.one",
+                "text.candle-kingdoms-dice.dice_throw.one",
                 playerNameo?.copy()?.setStyle(Style.EMPTY.withColor(16777045).withBold(true)),
                 Text.literal(stringArg).setStyle(Style.EMPTY.withColor(16755200).withBold(true)),
                 Text.literal("${resultList[0]}").setStyle(Style.EMPTY.withColor(16777045).withBold(true))
@@ -102,7 +102,7 @@ private fun throwDice (context: CommandContext<ServerCommandSource>, stringArg: 
     } else {
         val rolls = resultList.joinToString(prefix = "(", postfix = ")", separator = ", ")
         val msg = Text.translatable(
-            "text.candle-penis-dice.dice_throw.multiple",
+            "text.candle-kingdoms-dice.dice_throw.multiple",
             playerNameo?.copy()?.setStyle(Style.EMPTY.withColor(16772528).withBold(true)),
             throwCount,
             Text.literal(stringArg).setStyle(Style.EMPTY.withColor(15897161).withBold(true)),

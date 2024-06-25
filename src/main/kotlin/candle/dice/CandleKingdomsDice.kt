@@ -7,8 +7,8 @@ import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 
 
-object CandlePenisDice : ModInitializer {
-    private val logger = LoggerFactory.getLogger("candle-penis-dice")
+object CandleKingdomsDice : ModInitializer {
+    private val logger = LoggerFactory.getLogger("candle-kingdoms-dice")
 
 	override fun onInitialize() {
 		diceCommand
