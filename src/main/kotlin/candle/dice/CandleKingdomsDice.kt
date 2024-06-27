@@ -14,6 +14,6 @@ object CandleKingdomsDice : ModInitializer {
 		diceCommand
 		sizeRollCommand
 
-		logger.info("Hello Fabric world!")
+		logger.info("Candle Kingdoms Dice initialized.")
 	}
 }
