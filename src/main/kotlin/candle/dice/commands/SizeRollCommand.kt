@@ -11,12 +11,30 @@ val sizeRollCommand = command("sizeRoll") {
         runs {
             val randomSize = round(Random.nextDouble(0.001, 3.2)*100) / 100
             source.player?.getAttributeInstance(EntityAttributes.GENERIC_SCALE)?.baseValue = randomSize
-            source.sendMessage(Text.literal(randomSize.toString()))
+            source.sendMessage(Text.literal("Size: ${randomSize.toString()}"))
         }
     }
     literal("normal") {
         runs {
             source.player?.getAttributeInstance(EntityAttributes.GENERIC_SCALE)?.baseValue = 1.0
+            }
+    }
+
+    literal("giant") {
+        runs {
+            source.player?.getAttributeInstance(EntityAttributes.GENERIC_SCALE)?.baseValue = 3.0
+            }
+    }
+
+    literal("small") {
+        runs {
+            source.player?.getAttributeInstance(EntityAttributes.GENERIC_SCALE)?.baseValue = 0.2
+            }
+    }
+
+    literal("micro") {
+        runs {
+            source.player?.getAttributeInstance(EntityAttributes.GENERIC_SCALE)?.baseValue = 0.01
             }
     }
 }

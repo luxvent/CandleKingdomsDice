@@ -68,7 +68,7 @@ private fun throwDice (context: CommandContext<ServerCommandSource>, stringArg: 
     var max = 0
     val diceLogo = Text.literal("{\uD83C\uDFB2}").setStyle(Style.EMPTY.withColor(Formatting.WHITE))
     for (i in 1..throwCount) {
-        var result = 0
+        var result:Int
         when (stringArg) {
             "D2" -> {
                 result = Random.nextInt(1, 2 + 1)
@@ -106,7 +106,6 @@ private fun throwDice (context: CommandContext<ServerCommandSource>, stringArg: 
             }
 
             else -> {
-
                 break
             }
         }
@@ -159,7 +158,7 @@ private fun throwDice (context: CommandContext<ServerCommandSource>, stringArg: 
 
 
         } else {        // I wanna more :3
-            val rolls = resultList.joinToString(prefix = "(", postfix = ")", separator = ", ")
+            val rolls = resultList.joinToString(prefix = " (", postfix = ")", separator = ", ")
             val msg = Text.translatable(
                 "text.candle-kingdoms-dice.dice_throw.multiple",
                 diceLogo,
