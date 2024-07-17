@@ -8,8 +8,8 @@
 		"luxvent"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/luxvent/CandleKingdomsDice",
+		"sources": "https://github.com/luxvent/CandleKingdomsDice"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/candle-kingdoms-dice/icon.png",
@@ -28,7 +28,8 @@
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*",
-		"fabric-language-kotlin": "*"
+		"fabric-language-kotlin": "*",
+		"silk-commands": ">=1.10.7"
 	},
 	"suggests": {
 		"another-mod": "*"
